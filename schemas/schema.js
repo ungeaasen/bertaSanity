@@ -36,6 +36,23 @@ export default createSchema({
         }
       ]
      
+    },
+    {
+      name: 'frontpage',
+      type: 'document',
+      title: 'frontpage',
+      fields: [
+        {
+          name:'title',
+          type:'string',
+          title:'Title'
+        },
+        {
+          name: 'ingress',
+          type: 'string',
+          title: 'Ingress'
+        }
+      ]
     }
   ]),
 })
