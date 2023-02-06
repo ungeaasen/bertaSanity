@@ -34,9 +34,7 @@ export default createSchema({
           type: 'slug',
           title: 'Slug'
         }
-      ]
-     
-    },
+      ]},
     {
       name: 'frontpage',
       type: 'document',
@@ -53,6 +51,39 @@ export default createSchema({
           title: 'Ingress'
         }
       ]
-    }
-  ]),
+    },
+    {
+      name: 'forms',
+      type: 'document',
+      title: 'Forms',
+      fields: [
+        {
+          name: 'title',
+          type: 'string',
+          title: 'title' 
+        },
+        {
+          title: 'Names',
+          name: 'names',
+          type: 'array',
+          of: [
+          {
+            name: 'Qustion',
+            type: 'string'
+          },
+          {
+            name: 'entry',
+            type: 'string'
+          }
+
+          ]
+        },
+        {
+          name:'entry',
+          type: 'string', 
+          title:'entry'
+        }
+    ]
+  }
+  ])
 })
