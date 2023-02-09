@@ -63,27 +63,28 @@ export default createSchema({
           title: 'title' 
         },
         {
-          title: 'Names',
-          name: 'names',
-          type: 'array',
-          of: [
-          {
-            name: 'Qustion',
-            type: 'string'
-          },
-          {
-            name: 'entry',
-            type: 'string'
-          }
-
+          title: 'Question',
+          name: 'question',
+          type: 'object',
+          fields: [
+            {
+              title: 'Name',
+              name: 'name',
+              type: 'string'
+            },
+            {
+              title: 'Entry',
+              name: 'entry',
+              type: 'string',
+              description: 'entry nr from googleforms.'
+            }
           ]
-        },
-        {
-          name:'entry',
-          type: 'string', 
-          title:'entry'
         }
-    ]
-  }
+        {
+          title: 'Questions',
+          name: 'questions',
+          type: 'array',
+           of: [{type: 'question'}]
+    }
   ])
 })
