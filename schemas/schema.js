@@ -15,6 +15,23 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     {
+      name: 'frontpage',
+      type: 'document',
+      title: 'frontpage',
+      fields: [
+        {
+          name:'title',
+          type:'string',
+          title:'Title'
+        },
+        {
+          name: 'ingress',
+          type: 'string',
+          title: 'Ingress'
+        }
+      ]
+    },
+    {
       name: 'blog',
       type: 'document',
       title: 'blog',
@@ -34,11 +51,29 @@ export default createSchema({
           type: 'slug',
           title: 'Slug'
         }
-      ]},
+      ]
+    },
     {
-      name: 'frontpage',
+      title: "Question",
+      name: "question",
+      type: "object",
+      fields: [
+        {
+          title: "QuestionText",
+          name: "questionText",
+          type: "string"
+        },
+        {
+          title: "Entry",
+          name: "entry",
+          type: "string"
+        }
+      ]
+    },
+    {
+      name: 'surveys',
       type: 'document',
-      title: 'frontpage',
+      title: 'Surveys',
       fields: [
         {
           name:'title',
@@ -46,45 +81,17 @@ export default createSchema({
           title:'Title'
         },
         {
-          name: 'ingress',
+          name: 'introText',
           type: 'string',
-          title: 'Ingress'
-        }
-      ]
-    },
-    {
-      name: 'forms',
-      type: 'document',
-      title: 'Forms',
-      fields: [
-        {
-          name: 'title',
-          type: 'string',
-          title: 'title' 
+          title: 'Intro text'
         },
         {
-          title: 'Question',
-          name: 'question',
-          type: 'object',
-          fields: [
-            {
-              title: 'Name',
-              name: 'name',
-              type: 'string'
-            },
-            {
-              title: 'Entry',
-              name: 'entry',
-              type: 'string',
-              description: 'entry nr from googleforms.'
-            }
-          ]
+          title: "Survey",
+          name: "survey",
+          type: "array",
+          of: [{type: "question"}]
         }
-        {
-          title: 'Questions',
-          name: 'questions',
-          type: 'array',
-           of: [{type: 'question'}]
+      ]
     }
-  ])
+  ]),
 })
