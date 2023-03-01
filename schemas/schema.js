@@ -98,6 +98,19 @@ export default createSchema({
           of: [{type: "question"}]
         }
       ]
+    },
+    {
+      title: 'Guide',
+      name: 'guide',
+      type: 'document',
+      fields: [
+    {
+      title: 'Guide Text Block', 
+      name: 'guideTextBlock',
+      type: 'array', 
+      of: [{type: 'block'}]
+    },
+      ]
     }
   ]),
 })
