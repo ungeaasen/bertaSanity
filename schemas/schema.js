@@ -86,6 +86,12 @@ export default createSchema({
           title: 'Intro text'
         },
         {
+          title: 'Survey Award', 
+          name: 'surveyAwardText',
+          type: 'array', 
+          of: [{type: 'block'}]
+        },
+        {
           title: "Survey",
           name: "survey",
           type: "array",
