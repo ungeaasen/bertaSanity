@@ -55,8 +55,10 @@ export default[
         {
           title: "QuestionText",
           name: "questionText",
-          type: "string"
+           type: 'array', 
+            of: [{type: 'block'}]
         },
+        
         {
           title: "Entry",
           name: "entry",
