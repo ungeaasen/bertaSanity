@@ -14,14 +14,24 @@ export default[
       title: 'frontpage',
       fields: [
         {
+          title:'Title',
           name:'title',
-          type:'string',
-          title:'Title'
+          type:'string'
         },
         {
+          title: 'Ingress',
           name: 'ingress',
-          type: 'string',
-          title: 'Ingress'
+          type: 'string'
+        },
+        {
+          title: 'Hero title',
+          name:'heroTitle',
+          type: 'string'
+        },
+        {
+          title: 'Hero intro',
+          name: 'heroIntro',
+          type: 'string'
         }
       ]
     },
@@ -82,6 +92,11 @@ export default[
           title: 'Intro text'
         },
         {
+          name: 'surveyURL',
+          type: 'string',
+          title: 'Survey URL'
+        },
+        {
           title: 'Survey Award', 
           name: 'surveyAwardText',
           type: 'array', 
@@ -107,85 +122,46 @@ export default[
       of: [{type: 'block'}]
     },
       ]
-    }
-  /*
+    },
     {
-      name: 'frontpage',
+      title: 'About',
+      name: 'about',
       type: 'document',
-      title: 'frontpage',
       fields: [
         {
-          name:'title',
-          type:'string',
-          title:'Title'
-        },
-        {
-          name: 'ingress',
-          type: 'string',
-          title: 'Ingress'
+          title: 'Content',
+          name: 'content',
+          type: 'array',
+          of: [{type: 'block'}]
         }
       ]
     },
     {
-      name: 'blog',
+      title: 'Cards',
+      name: 'cards',
       type: 'document',
-      title: 'blog',
       fields: [
         {
+          title: 'Title',
           name: 'title',
-          type: 'string',
-          title: 'Title'
+          type: 'string'
         },
         {
-        name: 'subtitle',
-        type: 'string',
-        title: 'Subtitle'
+          title: 'Description',
+          name: 'description',
+          type: 'string'
         },
         {
-          name: 'slug',
-          type: 'slug',
-          title: 'Slug'
+          title: 'Image',
+          name: 'image',
+          type: 'image'
+        },
+        {
+          title: 'Content',
+          name: 'content',
+          type: 'array',
+          of: [{type: 'block'}]
         }
       ]
-    },
-    {
-      title: "Question",
-      name: "question",
-      type: "object",
-      fields: [
-        {
-          title: "QuestionText",
-          name: "questionText",
-          type: "string"
-        },
-        {
-          title: "Entry",
-          name: "entry",
-          type: "string"
-        }
-      ]
-    },
-    {
-      name: 'surveys',
-      type: 'document',
-      title: 'Surveys',
-      fields: [
-        {
-          name:'title',
-          type:'string',
-          title:'Title'
-        },
-        {
-          name: 'introText',
-          type: 'string',
-          title: 'Intro text'
-        },
-        {
-          title: "Survey",
-          name: "survey",
-          type: "array",
-          of: [{type: "question"}]
-        }
-      ]
-    }*/
-    ]
+    }
+  ]
